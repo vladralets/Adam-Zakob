@@ -1,0 +1,126 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../dist/img/reviews-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  &__title {
+    margin: 50px 20px;
+    // margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    color: white;
+  }
+
+  &__text {
+    font-family: Lato;
+    font-size: 14px;
+    line-height: 21px;
+    color: #A291A5;
+    width: auto;
+    margin: 0 35px;
+  }
+
+  &__bottom-line {
+    width: calc(100% - 76px);
+    margin: 22px 38px 5px 38px;
+    height: 2px;
+    background: #645766;
+    border: none;
+  }
+}
+
+.companies {
+  display: grid;
+  grid-template-columns: 1fr;
+  &__item {
+    margin: 41px 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__review {
+    font-family: Lato;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding: 30px 10px 0 10px;
+  }
+}
+
+@media (min-width: 481px) {
+  .container {
+    max-width: 992px;
+    min-width: 481px;
+  }
+
+  .reviews {
+
+    &__title {
+      margin: 85px 45px;
+      font-size: 42px;
+    }
+
+  }
+
+  .companies {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 54px;
+    grid-column-gap: 80px;
+    padding: 0 18px 57px 18px;
+    
+    &__item {
+      justify-content: flex-end;
+      margin: 0;
+      &__item:nth-of-type(4n) .companies__logo {
+        padding-bottom: 15px;
+      }
+    }
+
+    &__review {
+      margin: 0;
+      margin-top: 30px;
+      padding: 0;
+    }
+  }
+}
+
+@media (min-width: 993px) {
+  .container {
+    min-width: 993px;
+    max-width: 1200px;
+  }
+
+  .reviews {
+    &__title {
+      font-size: 48px;
+      margin-top: 108px;
+      margin-bottom: 82px;
+    }
+
+    &__bottom-line {
+      width: 780px;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+
+    &__text {
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+
+  .companies {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 120px;
+  }
+
+  
+  
+}

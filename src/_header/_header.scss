@@ -1,0 +1,414 @@
+.header {
+  position: relative;
+  
+
+  &__bg {
+    background: url(/dist/img/laptop.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+    color: #FFFFFF;
+    margin: 49px auto 19px;
+    }
+  
+  &__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    color: #8D81AC;
+    margin-bottom: 10px;
+    width: 299px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+    margin-bottom: 392px;
+  }
+
+  &__offer {
+    text-align: center;
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    width: 290px;
+    background: #8d81ac;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    border: none;
+    width: 290px;
+    height: 45px;
+    cursor: pointer;
+    margin: 0 auto;
+    top: -23px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  &__period-text {
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding-top: 38px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #848E97;
+  }
+}
+
+
+.menu {
+  background-color: #27262A;
+  width: 100%;
+  margin: 0;
+
+  &__first-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;  
+  }
+  &__logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+  }
+
+  &__logo-img {
+    width: 43px;
+    height: 41px;
+    background: url(/dist/img/forkio-logo-pink.png);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__logo-text {
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 16px;
+    color: #8D81AC;
+    margin-left: 17px;
+    display: none;
+  }
+
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 15px;
+    color: white;
+    background: #8D81AC;
+    width: 119px;
+    height: 37px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
+
+  &__burger {
+    margin-right: 15px;
+    width: 26px;
+    height: 21px;
+    cursor: pointer;
+    display: block;
+  }
+
+  &__item {
+    margin-top: 35%;
+    display: block;
+    height: 3px;
+    border-radius: 500px;
+    background-color: white;
+    position: relative;
+  }
+
+  &__item:before, &__item:after {
+    content: "";
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    border-radius: 50px;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__item:before {
+    margin-left: 11px;
+    right: 0;
+    width: 15px;
+    top: -8px;
+  }
+  
+  &__item:after {
+    bottom: -8px;
+    width: 100%;
+  }
+  
+  &__burger.active &__item {
+    background: none;
+  }
+  
+  &__burger.active &__item:before {
+    width: 100%;
+    margin-left: 0;
+    transform: rotate(45deg) translate(5px, 6px);
+    transition: 0.3s;
+  }
+  
+  &__burger.active &__item:after {
+    transform: rotate(-45deg) translate(5px,-6px);
+    transition: 0.3s;
+  }
+
+  &__nav {
+    display: none;
+  }
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  text-align: left;
+  top: 103px;
+
+  &__items {
+    background: #3B3B3B;
+  }
+
+  &__item {
+    background: #333333;
+    margin-bottom: 3px;
+    padding: 30px 40px;
+    position: relative;
+  }
+
+  &__link {
+    color: white;
+    font-size: 26px;
+    line-height: 26px;
+    position: relative;
+  }
+
+  &__item:active &__link {
+    color: #8D81AC;
+  }
+
+  &__link::before {
+    content: "";
+    width: 8px;
+    height: 53px;
+    background: #8D81AC;
+    position: absolute;
+    left: -38px;
+    top: -10px;
+    visibility: hidden;
+  }
+
+  &__item:active &__link::before {
+    visibility: visible;
+  }
+}
+
+.dropdown.active {
+  display: block;
+}
+
+.menu-tb {
+  display: none;
+}
+
+@media (min-width: 481px) {
+
+  .container {
+    max-width: 992px;
+    min-width: 481px;
+  }
+
+  .header {
+    &__title {
+      font-size: 72px;
+      margin: 69px auto 20px;
+    }
+
+    &__subtitle {
+      width: 100%;
+      font-size: 24px;
+    }
+
+    &__desc {
+      margin-bottom: 470px;
+    }
+
+    &__button {
+      width: 390px;
+      height: 62px;
+      top: -32px;
+    }
+  }
+  .menu {
+    &__burger {
+      display: none;
+    }
+
+    &__button {
+      margin-right: 20px;
+      margin-bottom: 21px;
+    }
+
+    &__burger {
+      display: none;
+    }
+
+    &__logo-text {
+      display: block;
+    }
+  }
+
+  .menu-tb {
+    display: block;
+
+    &__nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 14px;
+      gap: 47px;
+    }
+
+    &__item {
+      list-style: none;
+    }
+
+    &__link {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      color: #8D81AC;
+    }
+  }
+}
+
+@media (min-width: 993px) {
+
+  .container {
+    max-width: none;
+    min-width: 993px;
+  }
+
+  .menu-tb {
+    display: none;
+  }
+  .menu {
+    background: transparent;
+    
+    &__button {
+      width: 145px;
+      height: 38px;
+      margin: 32px auto;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 17px;
+      width: 145px;
+    }
+    &__nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__nav-item {
+      margin-right: 48px;
+      list-style: none;
+    }
+
+    &__nav-link {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 17px;
+      color: #8D81AC;
+    }
+  } 
+
+  .header {
+    &__title {
+      font-size: 82px;
+      margin-top: 83px;
+    }
+
+    &__subtitle {
+      font-size: 30px;
+    }
+
+
+    &__button {
+      width: 390px;
+      height: 62px;
+      top: -32px;
+    }
+
+    &__button:hover {
+      background-color: white;
+      border: 1px solid #8D81AC;
+      color: #8D81AC;
+      width: 390px;
+    }
+
+    &__period-text {
+      padding-top: 47px;
+    }
+  }
+
+  .menu__logo-link:hover .menu__logo-img {
+    background: url(/dist/img/forkio-logo.png);
+    width: 43px;
+    height: 41px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .menu__logo-link:hover .menu__logo-text {
+    color: white;
+  }
+
+  .menu__nav-link:hover {
+    color: white;
+  }
+
+  .menu__button:hover {
+    background: white;
+    color: #8D81AC;
+    border: 1px solid #8D81AC;
+    box-sizing: border-box;
+    width: 145px;
+    height: 38px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,28 @@
+@import "globals/vars";
+@import "globals/mixins";
+
+body {
+  font-family: 'Red Hat Display', sans-serif;
+}
+.container{
+  margin: 0 auto;
+  max-width: 480px;
+  min-width: 320px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul, ol{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {margin: 0;}
+
+// Main styles
+@import "_header/header";

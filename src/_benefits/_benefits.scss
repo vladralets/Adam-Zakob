@@ -1,0 +1,163 @@
+.benefits {
+  position: relative;
+  &__box{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0 auto;
+    width: 230px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #8D81AC;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 37px;
+    margin-top: 36px;
+    margin-bottom: 445px;
+  }
+
+  &__content-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 26px;
+  }
+
+  &__content-title {
+    margin: 27px auto 14px;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    color: #323232;
+  }
+
+  &__content-desc {
+    font-family: Lato;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #848E97;
+  }
+
+  &__img-mb {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+  }
+  &__img {
+    display: none;
+  }
+}
+
+@media (min-width: 481px) {
+  .benefits {
+
+    &__title {
+      width: 100%;
+
+    }
+    &__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 37px;
+      margin: 52px 35px 594px;
+    }
+  
+    &__content-item {
+      flex-direction: row;
+    }
+
+    &__content-img {
+      min-width: 111px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      height: 100%;
+    }
+
+    &__content-text {
+      text-align: left;
+      margin-left: 23px;
+      gap: 16px;
+    }
+
+    &__content-title {
+      margin: 0 auto 16px;
+    }
+
+
+    &__img-mb {
+      display: none;
+    }
+  
+    &__img {
+      display: block;
+      position: absolute;
+      bottom: 10px;
+      right: initial;
+      // left: auto;
+      
+    }
+  }
+}
+
+@media (min-width: 698px) {
+  .benefits {
+    &__img {
+      right: 0;
+    }
+  }
+}
+
+@media (min-width: 993px) {
+  .benefits {
+    background: #F4F4F4;
+
+    &__box {
+      justify-content: center;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
+
+    &__title {
+      margin-top: 100px;
+      display: block;
+      width: 584px;
+      font-size: 44px;
+    }
+
+    &__content {
+      margin-top: 100px;
+      margin-bottom: 69px;
+      margin-left: 40px;
+
+    }
+    
+    &__content-desc {
+      max-width: 405px;
+    }
+    
+    &__img {
+      max-height: 519px;
+      max-width: 50%;
+      bottom: 5px;
+    }
+  }
+
+}
